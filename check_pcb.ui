@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>978</width>
-    <height>608</height>
+    <width>689</width>
+    <height>339</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -129,6 +129,7 @@ background-color:rgb(17,16,26);
                    <font>
                     <family>Segoe UI Black</family>
                     <pointsize>12</pointsize>
+                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -140,13 +141,13 @@ background-color:rgb(17,16,26);
                   </property>
                  </widget>
                 </item>
-                <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                <item>
                  <widget class="QLabel" name="label_2">
                   <property name="text">
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap resource="icons/icons.qrc">:/icons/check-circle.svg</pixmap>
+                   <pixmap>icons/check-circle.svg</pixmap>
                   </property>
                  </widget>
                 </item>
@@ -190,6 +191,7 @@ background-color:rgb(17,16,26);
               <widget class="QToolBox" name="toolBox">
                <property name="font">
                 <font>
+                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -205,7 +207,7 @@ QToolBox::tab{
 }</string>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="page">
                 <property name="geometry">
@@ -213,15 +215,15 @@ QToolBox::tab{
                   <x>0</x>
                   <y>0</y>
                   <width>200</width>
-                  <height>459</height>
+                  <height>191</height>
                  </rect>
                 </property>
                 <property name="styleSheet">
                  <string notr="true"/>
                 </property>
                 <attribute name="icon">
-                 <iconset resource="icons/icons.qrc">
-                  <normaloff>:/icons/chevron-down.svg</normaloff>:/icons/chevron-down.svg</iconset>
+                 <iconset>
+                  <normaloff>icons/chevron-down.svg</normaloff>icons/chevron-down.svg</iconset>
                 </attribute>
                 <attribute name="label">
                  <string>Check by comparison</string>
@@ -246,11 +248,12 @@ QToolBox::tab{
                   <widget class="QPushButton" name="pushButton_5">
                    <property name="font">
                     <font>
+                     <weight>75</weight>
                      <bold>true</bold>
                     </font>
                    </property>
                    <property name="text">
-                    <string>Item 1</string>
+                    <string>FirstButton</string>
                    </property>
                   </widget>
                  </item>
@@ -258,6 +261,7 @@ QToolBox::tab{
                   <widget class="QPushButton" name="pushButton_6">
                    <property name="font">
                     <font>
+                     <weight>75</weight>
                      <bold>true</bold>
                     </font>
                    </property>
@@ -270,6 +274,7 @@ QToolBox::tab{
                   <widget class="QPushButton" name="pushButton_7">
                    <property name="font">
                     <font>
+                     <weight>75</weight>
                      <bold>true</bold>
                     </font>
                    </property>
@@ -286,12 +291,12 @@ QToolBox::tab{
                   <x>0</x>
                   <y>0</y>
                   <width>200</width>
-                  <height>459</height>
+                  <height>191</height>
                  </rect>
                 </property>
                 <attribute name="icon">
-                 <iconset resource="icons/icons.qrc">
-                  <normaloff>:/icons/chevron-down.svg</normaloff>:/icons/chevron-down.svg</iconset>
+                 <iconset>
+                  <normaloff>icons/chevron-down.svg</normaloff>icons/chevron-down.svg</iconset>
                 </attribute>
                 <attribute name="label">
                  <string>Check by ML</string>
@@ -316,6 +321,7 @@ QToolBox::tab{
                   <widget class="QPushButton" name="pushButton_8">
                    <property name="font">
                     <font>
+                     <weight>75</weight>
                      <bold>true</bold>
                     </font>
                    </property>
@@ -328,6 +334,7 @@ QToolBox::tab{
                   <widget class="QPushButton" name="pushButton_9">
                    <property name="font">
                     <font>
+                     <weight>75</weight>
                      <bold>true</bold>
                     </font>
                    </property>
@@ -448,21 +455,21 @@ QToolBox::tab{
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <widget class="QPushButton" name="pushButton_4">
+               <widget class="QPushButton" name="pushButton_10">
                 <property name="geometry">
                  <rect>
                   <x>0</x>
-                  <y>0</y>
-                  <width>44</width>
-                  <height>40</height>
+                  <y>10</y>
+                  <width>54</width>
+                  <height>32</height>
                  </rect>
                 </property>
                 <property name="text">
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset resource="icons/icons.qrc">
-                  <normaloff>:/icons/align-left.svg</normaloff>:/icons/align-left.svg</iconset>
+                 <iconset>
+                  <normaloff>icons/arrow-down-left.svg</normaloff>icons/arrow-down-left.svg</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -513,8 +520,8 @@ QToolBox::tab{
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="icons/icons.qrc">
-                    <normaloff>:/icons/arrow-down-left.svg</normaloff>:/icons/arrow-down-left.svg</iconset>
+                   <iconset>
+                    <normaloff>icons/arrow-down-left.svg</normaloff>icons/arrow-down-left.svg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -530,8 +537,8 @@ QToolBox::tab{
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="icons/icons.qrc">
-                    <normaloff>:/icons/maximize-2.svg</normaloff>:/icons/maximize-2.svg</iconset>
+                   <iconset>
+                    <normaloff>icons/maximize-2.svg</normaloff>icons/maximize-2.svg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -559,9 +566,6 @@ QToolBox::tab{
                  </widget>
                 </item>
                </layout>
-               <zorder>pushButton</zorder>
-               <zorder>pushButton_3</zorder>
-               <zorder>pushButton_2</zorder>
               </widget>
              </item>
             </layout>
