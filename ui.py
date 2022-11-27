@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(689, 304)
+        MainWindow.resize(955, 499)
         MainWindow.setStyleSheet("*{\n"
 "border: none;\n"
 "color: white;\n"
@@ -107,7 +107,7 @@ class Ui_MainWindow(object):
 "}")
         self.toolBox.setObjectName("toolBox")
         self.page = QtWidgets.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 155, 156))
+        self.page.setGeometry(QtCore.QRect(0, 0, 155, 351))
         self.page.setStyleSheet("")
         self.page.setObjectName("page")
         self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.page)
@@ -121,13 +121,13 @@ class Ui_MainWindow(object):
         self.first_button.setFont(font)
         self.first_button.setObjectName("first_button")
         self.verticalLayout_6.addWidget(self.first_button)
-        self.secound_button = QtWidgets.QPushButton(self.page)
+        self.predict_button = QtWidgets.QPushButton(self.page)
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
-        self.secound_button.setFont(font)
-        self.secound_button.setObjectName("secound_button")
-        self.verticalLayout_6.addWidget(self.secound_button)
+        self.predict_button.setFont(font)
+        self.predict_button.setObjectName("predict_button")
+        self.verticalLayout_6.addWidget(self.predict_button)
         self.third_button = QtWidgets.QPushButton(self.page)
         font = QtGui.QFont()
         font.setBold(True)
@@ -139,7 +139,7 @@ class Ui_MainWindow(object):
         icon.addPixmap(QtGui.QPixmap("icons/chevron-down.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolBox.addItem(self.page, icon, "")
         self.page_2 = QtWidgets.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 155, 156))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 100, 30))
         self.page_2.setObjectName("page_2")
         self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.page_2)
         self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
@@ -307,8 +307,8 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Check PCB"))
         self.label.setText(_translate("MainWindow", "Check PCB"))
-        self.first_button.setText(_translate("MainWindow", "Firs tButton"))
-        self.secound_button.setText(_translate("MainWindow", "Secound Button"))
+        self.first_button.setText(_translate("MainWindow", "First Button"))
+        self.predict_button.setText(_translate("MainWindow", "Predict"))
         self.third_button.setText(_translate("MainWindow", "Item 3"))
         self.toolBox.setItemText(self.toolBox.indexOf(self.page), _translate("MainWindow", "Check by comparison"))
         self.five_button.setText(_translate("MainWindow", "Five Button"))

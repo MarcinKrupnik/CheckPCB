@@ -30,11 +30,15 @@ class MainWindow(QMainWindow):
         # Set window tittle
         self.setWindowTitle("Check PCB")
 
+        self.image=QPixmap("your_image.jpg")
+
         self.ui.minimize_window_button.clicked.connect(lambda: self.showMinimized())
 
         self.ui.close_window_button.clicked.connect(lambda: self.close())
 
         self.ui.restore_window_button.clicked.connect(lambda: self.restore_or_maximize_window())
+
+        self.ui.predict_button.clicked.connect(lambda: machine_learning.predict_pcb(self))
 
         def moveWindow(e):
  
@@ -47,12 +51,7 @@ class MainWindow(QMainWindow):
                     e.accept()
 
         self.ui.header_frame.mouseMoveEvent = moveWindow
-        width = self.ui.frame_4.frameGeometry().width()
-        height = self.ui.frame_4.frameGeometry().height()
-        self.ui.first_image.setMaximumSize(QtCore.QSize(width, height))
-        image=QPixmap("your_image.jpg")
         self.ui.menu_button.clicked.connect(lambda: self.slideLeftMenu())
-        self.ui.first_image.setPixmap(image)
         self.show()
 
     def slideLeftMenu(self):
@@ -86,12 +85,24 @@ class MainWindow(QMainWindow):
 
         if self.isMaximized():
             self.showNormal()
-
+            self.ui.frame_4.setMinimumSize(QtCore.QSize(750, 410))
+            self.ui.frame_4.setMaximumSize(QtCore.QSize(750, 410))
+            width = self.ui.frame_4.frameGeometry().width()
+            height = self.ui.frame_4.frameGeometry().height()
+            self.ui.first_image.setMaximumSize(QtCore.QSize(750, 410))
+            rez = QtCore.QSize(width, height)
             self.ui.restore_window_button.setIcon(QtGui.QIcon(u"icons/maximize-2.svg"))
+            self.ui.first_image.setPixmap(self.image.scaled(rez))
         else:
             self.showMaximized()
-
+            self.ui.frame_4.setMinimumSize(QtCore.QSize(1120, 620))
+            self.ui.frame_4.setMaximumSize(QtCore.QSize(1120, 620))
+            width = self.ui.frame_4.frameGeometry().width()
+            height = self.ui.frame_4.frameGeometry().height()
+            self.ui.first_image.setMaximumSize(QtCore.QSize(1120, 620))
+            rez = QtCore.QSize(width, height)
             self.ui.restore_window_button.setIcon(QtGui.QIcon(u"icons/minimize-2.svg"))
+            self.ui.first_image.setPixmap(self.image.scaled(rez))
 
 if __name__ == "__main__":
         app = QApplication(sys.argv)
