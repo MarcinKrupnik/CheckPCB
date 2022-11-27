@@ -45,7 +45,7 @@ background-color:rgb(17,16,26);
      <widget class="QFrame" name="menu_frame">
       <property name="minimumSize">
        <size>
-        <width>200</width>
+        <width>0</width>
         <height>0</height>
        </size>
       </property>
@@ -79,6 +79,12 @@ background-color:rgb(17,16,26);
        </property>
        <item>
         <widget class="QFrame" name="menu_main_frame">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">background-color:rgb(17,16,26);
 </string>
@@ -245,7 +251,7 @@ QToolBox::tab{
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="pushButton_5">
+                  <widget class="QPushButton" name="first_button">
                    <property name="font">
                     <font>
                      <weight>75</weight>
@@ -253,12 +259,12 @@ QToolBox::tab{
                     </font>
                    </property>
                    <property name="text">
-                    <string>FirstButton</string>
+                    <string>Firs tButton</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushButton_6">
+                  <widget class="QPushButton" name="secound_button">
                    <property name="font">
                     <font>
                      <weight>75</weight>
@@ -266,12 +272,12 @@ QToolBox::tab{
                     </font>
                    </property>
                    <property name="text">
-                    <string>Item 2</string>
+                    <string>Secound Button</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushButton_7">
+                  <widget class="QPushButton" name="third_button">
                    <property name="font">
                     <font>
                      <weight>75</weight>
@@ -318,7 +324,7 @@ QToolBox::tab{
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="pushButton_8">
+                  <widget class="QPushButton" name="five_button">
                    <property name="font">
                     <font>
                      <weight>75</weight>
@@ -326,12 +332,12 @@ QToolBox::tab{
                     </font>
                    </property>
                    <property name="text">
-                    <string>Item 1</string>
+                    <string>Five Button</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushButton_9">
+                  <widget class="QPushButton" name="six_button">
                    <property name="font">
                     <font>
                      <weight>75</weight>
@@ -339,7 +345,7 @@ QToolBox::tab{
                     </font>
                    </property>
                    <property name="text">
-                    <string>Item 2</string>
+                    <string>Six Button</string>
                    </property>
                   </widget>
                  </item>
@@ -455,7 +461,7 @@ QToolBox::tab{
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <widget class="QPushButton" name="pushButton_10">
+               <widget class="QPushButton" name="menu_button">
                 <property name="geometry">
                  <rect>
                   <x>0</x>
@@ -515,7 +521,7 @@ QToolBox::tab{
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QPushButton" name="pushButton_3">
+                 <widget class="QPushButton" name="minimize_window_button">
                   <property name="text">
                    <string/>
                   </property>
@@ -532,7 +538,7 @@ QToolBox::tab{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton_2">
+                 <widget class="QPushButton" name="restore_window_button">
                   <property name="text">
                    <string/>
                   </property>
@@ -542,14 +548,14 @@ QToolBox::tab{
                   </property>
                   <property name="iconSize">
                    <size>
-                    <width>32</width>
-                    <height>32</height>
+                    <width>30</width>
+                    <height>30</height>
                    </size>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton">
+                 <widget class="QPushButton" name="close_window_button">
                   <property name="text">
                    <string/>
                   </property>
