@@ -264,6 +264,19 @@ QToolBox::tab{
                   </widget>
                  </item>
                  <item>
+                  <widget class="QPushButton" name="differences_button">
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Find differences</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
                   <widget class="QPushButton" name="predict_button">
                    <property name="font">
                     <font>
@@ -276,19 +289,6 @@ QToolBox::tab{
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QPushButton" name="third_button">
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Item 3</string>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </widget>
                <widget class="QWidget" name="page_2">
@@ -296,8 +296,8 @@ QToolBox::tab{
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>100</width>
-                  <height>30</height>
+                  <width>155</width>
+                  <height>351</height>
                  </rect>
                 </property>
                 <attribute name="icon">

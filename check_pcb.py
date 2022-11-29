@@ -7,6 +7,7 @@ import sys
 from ui import *
 import machine_learning
 import text_recognition
+from PIL import Image, ImageChops
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -31,6 +32,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Check PCB")
 
         self.image=QPixmap("your_image.jpg")
+        self.image2=QPixmap("your_image3.jpg")
 
         self.ui.minimize_window_button.clicked.connect(lambda: self.showMinimized())
 
@@ -40,6 +42,9 @@ class MainWindow(QMainWindow):
 
         self.ui.predict_button.clicked.connect(lambda: machine_learning.predict_pcb(self))
 
+        self.ui.first_button.clicked.connect(lambda: self.first_button())
+
+        self.ui.differences_button.clicked.connect(lambda: self.differences())
         def moveWindow(e):
  
             if self.isMaximized() == False: 
@@ -53,6 +58,17 @@ class MainWindow(QMainWindow):
         self.ui.header_frame.mouseMoveEvent = moveWindow
         self.ui.menu_button.clicked.connect(lambda: self.slideLeftMenu())
         self.show()
+
+    def first_button(self):
+        self.ui.frame_4.hide()
+
+    def differences(self):
+        image1 = Image.open("your_image.jpg")
+        image2 = Image.open("your_image3.jpg")
+        diff = ImageChops.difference(image1,image2)
+        diff = diff.save("difference.jpg")
+        self.image=QPixmap("difference.jpg")
+        self.ui.frame_4.show()
 
     def slideLeftMenu(self):
 

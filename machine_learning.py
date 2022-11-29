@@ -23,6 +23,7 @@ def predict_pcb(self):
     self.image=QPixmap("prediction.jpg")
     rez = QtCore.QSize(width, height)
     self.ui.first_image.setPixmap(self.image.scaled(rez))
+    self.ui.frame_4.show()
 
 if __name__ == "__main__":
     main()
