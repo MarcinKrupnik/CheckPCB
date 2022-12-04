@@ -19,8 +19,8 @@ def predict_pcb(self,choice):
     # infer on a local image
     image = Image.open(image_path)
     image=image.resize((1640,1232))
-    image=image.save(image_path+"resized")
-    print(model.predict(image_path+"resized", confidence=65, overlap=15).json())
+    image=image.save(image_path.rstrip('.jpg')+'resized'+'.jpg')
+    print(model.predict(image_path.rstrip('.jpg')+'resized'+'.jpg', confidence=65, overlap=15).json())
 
     # visualize your prediction
     model.predict(image_path, confidence=65, overlap=15).save("prediction.jpg")
