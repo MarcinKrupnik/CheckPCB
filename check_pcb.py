@@ -55,9 +55,9 @@ class MainWindow(QMainWindow):
 
         self.ui.predict_base.clicked.connect(lambda: machine_learning.predict_pcb(self,"base"))
 
-        self.ui.make_base_image.clicked.connect(lambda: make_image.make_image(self,self.ui.make_image_name(),"base"))
+        self.ui.make_base_image.clicked.connect(lambda: make_image.make_image(self,self.ui.make_image_name.toPlainText(),"base"))
         
-        self.ui.make_prod_image.clicked.connect(lambda: make_image.make_image(self,self.ui.make_prod_combobox.currentText(),self.ui.make_image_name()))
+        self.ui.make_prod_image.clicked.connect(lambda: make_image.make_image(self,self.ui.make_prod_combobox.currentText(),self.ui.make_image_name.toPlainText()))
 
         self.ui.show_differences.clicked.connect(lambda: differences.differences(self))
         self.comboBox_prod_update()
