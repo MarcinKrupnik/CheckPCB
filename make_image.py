@@ -14,7 +14,7 @@ def make_image(self,image_name,base_name):
         os.system('libcamera-jpeg -o '+' images/'+ image_name + '/'+ image_name +'_base'+'/'+image_name +'_base'+'.jpeg')
     else:
         try:
-            os.mkdir(str(os.getcwd())+'images/'+ image_name+"/"+image_name)
+            os.mkdir(str(os.getcwd())+'/images/'+ image_name+"/"+image_name)
         except:
             print("Folder już istnieje")
         os.system('libcamera-jpeg -o '+' images/'+image_name+'/'+ image_name +'/'+image_name+str(1+len(os.listdir('images/'+image_name+'/'+ image_name)))+'.jpeg')
