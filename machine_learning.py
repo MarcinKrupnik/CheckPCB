@@ -2,6 +2,7 @@ from roboflow import Roboflow
 from PyQt5.QtGui import QColor, QPixmap
 import check_pcb
 from ui import *
+from PIL import Image, ImageChops
 def main():
     print("main")
 
@@ -16,7 +17,10 @@ def predict_pcb(self,choice):
     else:
         image_path="images/"+self.ui.base_combobox.currentText()+'/'+self.ui.base_combobox.currentText()+'/'+self.ui.prod_combobox.currentText()
     # infer on a local image
-    print(model.predict(image_path.resize((1640,1232)), confidence=65, overlap=15).json())
+    image = Image.open(image_path)
+    image=image.resize((1640,1232))
+    image=image.save(image_path+"resized")
+    print(model.predict(image_path+"resized", confidence=65, overlap=15).json())
 
     # visualize your prediction
     model.predict(image_path, confidence=65, overlap=15).save("prediction.jpg")
