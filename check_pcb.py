@@ -7,8 +7,9 @@ import sys
 from ui import *
 import machine_learning
 import text_recognition
-from PIL import Image, ImageChops
-
+import make_image
+import differences
+import os
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -34,17 +35,38 @@ class MainWindow(QMainWindow):
         self.image=QPixmap("your_image.jpg")
         self.image2=QPixmap("your_image3.jpg")
 
+        self.width = self.ui.frame_4.frameGeometry().width()
+        self.height = self.ui.frame_4.frameGeometry().height()
+        self.rez = QtCore.QSize(self.width, self.height)
+
         self.ui.minimize_window_button.clicked.connect(lambda: self.showMinimized())
 
         self.ui.close_window_button.clicked.connect(lambda: self.close())
 
         self.ui.restore_window_button.clicked.connect(lambda: self.restore_or_maximize_window())
 
-        self.ui.predict_button.clicked.connect(lambda: machine_learning.predict_pcb(self))
+        self.ui.predict_button.clicked.connect(lambda: self.open_page_predict())
+        
+        self.ui.first_button.clicked.connect(lambda: self.open_page_makeimage())
 
-        self.ui.first_button.clicked.connect(lambda: self.first_button())
+        self.ui.differences_button.clicked.connect(lambda: self.open_page_diff())
 
-        self.ui.differences_button.clicked.connect(lambda: self.differences())
+        self.ui.predict_prod.clicked.connect(lambda: machine_learning.predict_pcb(self,"prod"))
+
+        self.ui.predict_base.clicked.connect(lambda: machine_learning.predict_pcb(self,"base"))
+
+        self.ui.make_base_image.clicked.connect(lambda: make_image.make_image(self,self.ui.make_image_name,"base"))
+        
+        self.ui.make_prod_image.clicked.connect(lambda: make_image.make_image(self,self.ui.make_prod_combobox.currentText,self.ui.make_image_name))
+
+        self.ui.show_differences.clicked.connect(lambda: differences.differences(self))
+        self.comboBox_prod_update()
+        self.ui.stackedWidget.setCurrentWidget(self.ui.page_4)
+
+        self.ui.base_combobox.activated.connect(lambda: self.comboBox_prod_combobox_update())
+
+        self.ui.choose_base_combobox.activated.connect(lambda: self.comboBox_diff_update())
+
         def moveWindow(e):
  
             if self.isMaximized() == False: 
@@ -59,17 +81,40 @@ class MainWindow(QMainWindow):
         self.ui.menu_button.clicked.connect(lambda: self.slideLeftMenu())
         self.show()
 
-    def first_button(self):
-        self.ui.frame_4.hide()
+    def open_page_makeimage(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.page_4)
+        self.comboBox_prod_update()
 
-    def differences(self):
-        image1 = Image.open("your_image.jpg")
-        image2 = Image.open("your_image3.jpg")
-        diff = ImageChops.difference(image1,image2)
-        diff = diff.save("difference.jpg")
-        self.image=QPixmap("difference.jpg")
-        self.ui.frame_4.show()
+    def open_page_diff(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.page_5)
+        self.comboBox_choosebase_update()
+        self.comboBox_diff_update()
 
+    def open_page_predict(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.page_6)
+        self.comboBox_base_update()
+        self.comboBox_prod_combobox_update()
+        
+    def comboBox_prod_update(self):
+        self.ui.make_prod_combobox.clear()
+        self.ui.make_prod_combobox.addItems(os.listdir('images'))
+        
+    def comboBox_choosebase_update(self):
+        self.ui.choose_base_combobox.clear()
+        self.ui.choose_base_combobox.addItems(os.listdir('images'))
+    def comboBox_diff_update(self):
+        self.ui.difference_combobox.clear()
+        location= self.ui.choose_base_combobox.currentText()
+        self.ui.difference_combobox.addItems(os.listdir('images/'+location+'/'+location))
+
+    def comboBox_base_update(self):
+        self.ui.base_combobox.clear()
+        self.ui.base_combobox.addItems(os.listdir('images'))
+        
+    def comboBox_prod_combobox_update(self):
+        self.ui.prod_combobox.clear()
+        location= self.ui.base_combobox.currentText()
+        self.ui.prod_combobox.addItems(os.listdir('images/'+location+'/'+location))
     def slideLeftMenu(self):
 
         width = self.ui.menu_frame.width()
@@ -103,22 +148,22 @@ class MainWindow(QMainWindow):
             self.showNormal()
             self.ui.frame_4.setMinimumSize(QtCore.QSize(750, 410))
             self.ui.frame_4.setMaximumSize(QtCore.QSize(750, 410))
-            width = self.ui.frame_4.frameGeometry().width()
-            height = self.ui.frame_4.frameGeometry().height()
             self.ui.first_image.setMaximumSize(QtCore.QSize(750, 410))
-            rez = QtCore.QSize(width, height)
+            self.width = self.ui.frame_4.frameGeometry().width()
+            self.height = self.ui.frame_4.frameGeometry().height()
+            self.rez = QtCore.QSize(self.width, self.height)
             self.ui.restore_window_button.setIcon(QtGui.QIcon(u"icons/maximize-2.svg"))
-            self.ui.first_image.setPixmap(self.image.scaled(rez))
+            self.ui.first_image.setPixmap(self.image.scaled(self.rez))
         else:
             self.showMaximized()
             self.ui.frame_4.setMinimumSize(QtCore.QSize(1120, 620))
             self.ui.frame_4.setMaximumSize(QtCore.QSize(1120, 620))
-            width = self.ui.frame_4.frameGeometry().width()
-            height = self.ui.frame_4.frameGeometry().height()
             self.ui.first_image.setMaximumSize(QtCore.QSize(1120, 620))
-            rez = QtCore.QSize(width, height)
+            self.width = self.ui.frame_4.frameGeometry().width()
+            self.height = self.ui.frame_4.frameGeometry().height()
+            self.rez = QtCore.QSize(self.width, self.height)
             self.ui.restore_window_button.setIcon(QtGui.QIcon(u"icons/minimize-2.svg"))
-            self.ui.first_image.setPixmap(self.image.scaled(rez))
+            self.ui.first_image.setPixmap(self.image.scaled(self.rez))
 
 if __name__ == "__main__":
         app = QApplication(sys.argv)
