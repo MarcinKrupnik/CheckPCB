@@ -16,7 +16,7 @@ def predict_pcb(self,choice):
     else:
         image_path="images/"+self.ui.base_combobox.currentText()+'/'+self.ui.base_combobox.currentText()+'/'+self.ui.prod_combobox.currentText()
     # infer on a local image
-    print(model.predict(image_path, confidence=65, overlap=15).json())
+    print(model.predict(image_path.resize((1640,1232)), confidence=65, overlap=15).json())
 
     # visualize your prediction
     model.predict(image_path, confidence=65, overlap=15).save("prediction.jpg")
