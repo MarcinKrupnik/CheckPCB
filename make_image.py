@@ -9,8 +9,11 @@ def make_image(self,image_name,base_name):
         except:
             "Folder problem"
     if base_name == "base":
-        if not os.path.exists('/images/'+ image_name):
-            os.mkdir(str(os.getcwd())+'/images/'+ image_name+'/'+image_name+'base')
+        try:
+            if not os.path.exists('/images/'+ image_name):
+                os.mkdir(str(os.getcwd())+'/images/'+ image_name+'/'+image_name+'base')
+        except:
+            print("this folder exists")
         os.system('libcamera-jpeg -o '+' /images/'+ image_name + '/'+ image_name +'base'+'/'+image_name +'base'+'.jpg')
     else:
         try:
