@@ -7,6 +7,7 @@ def main():
 def differences(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.page_3)
         image1 = Image.open('images/'+self.ui.choose_base_combobox.currentText()+'/'+self.ui.choose_base_combobox.currentText()+'/'+self.ui.difference_combobox.currentText())
+        print("To piervsze dziala")
         image2 = Image.open('images/'+self.ui.choose_base_combobox.currentText()+'/'+self.ui.choose_base_combobox.currentText()+'base/'+self.ui.choose_base_combobox.currentText()+'base.jpg')
         diff = ImageChops.difference(image1,image2)
         diff = diff.save('/images/'+self.ui.choose_base_combobox.currentText()+'/'+self.ui.choose_base_combobox.currentText()+'/difference.jpg')
