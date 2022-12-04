@@ -4,7 +4,10 @@ def main():
     print("Main")
 def make_image(self,image_name,base_name):
     if not os.path.exists('/images/'+ image_name):
-        os.mkdir(str(os.getcwd())+'/images/'+ image_name)
+        try: 
+            os.mkdir(str(os.getcwd())+'/images/'+ image_name)
+        except:
+            "Folder problem"
     if base_name == "base":
         if not os.path.exists('/images/'+ image_name):
             os.mkdir(str(os.getcwd())+'/images/'+ image_name+'/'+image_name+'_base')
