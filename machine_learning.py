@@ -18,12 +18,12 @@ def predict_pcb(self,choice):
         image_path="images/"+self.ui.base_combobox.currentText()+'/'+self.ui.base_combobox.currentText()+'/'+self.ui.prod_combobox.currentText()
     # infer on a local image
     image = Image.open(image_path)
-    image=image.resize((820,616))
+    image=image.resize((1640,1232))
     image=image.save(image_path.rstrip('.jpg')+'resized'+'.jpg')
     print(model.predict(image_path.rstrip('.jpg')+'resized'+'.jpg', confidence=65, overlap=15).json())
 
     # visualize your prediction
-    model.predict(image_path, confidence=65, overlap=15).save("prediction.jpg")
+    model.predict(image_path.rstrip('.jpg')+'resized'+'.jpg', confidence=65, overlap=15).save("prediction.jpg")
     # infer on an image hosted elsewhere
     # print(model.predict("URL_OF_YOUR_IMAGE", hosted=True, confidence=40, overlap=30).json())
     width = self.ui.frame_4.frameGeometry().width()
