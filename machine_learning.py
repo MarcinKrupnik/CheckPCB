@@ -12,7 +12,7 @@ def predict_pcb(self,choice):
     model = project.version(6).model
     image_path=""
     if choice=="base":
-        image_path="images/"+self.ui.base_combobox.currentText()+'/'+self.ui.base_combobox.currentText()+'base/'+self.ui.base_combobox.currentText()+'.jpg'
+        image_path="images/"+self.ui.base_combobox.currentText()+'/'+self.ui.base_combobox.currentText()+'base/'+self.ui.base_combobox.currentText()+'base.jpg'
     else:
         image_path="images/"+self.ui.base_combobox.currentText()+'/'+self.ui.base_combobox.currentText()+'/'+self.ui.prod_combobox.currentText()
     # infer on a local image
