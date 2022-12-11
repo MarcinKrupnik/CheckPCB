@@ -232,7 +232,7 @@ QToolBox::tab{
                   <normaloff>icons/chevron-down.svg</normaloff>icons/chevron-down.svg</iconset>
                 </attribute>
                 <attribute name="label">
-                 <string>Check by comparison</string>
+                 <string>Prepare images</string>
                 </attribute>
                 <layout class="QVBoxLayout" name="verticalLayout_6">
                  <property name="spacing">
@@ -317,7 +317,7 @@ QToolBox::tab{
                   <normaloff>icons/chevron-down.svg</normaloff>icons/chevron-down.svg</iconset>
                 </attribute>
                 <attribute name="label">
-                 <string>Check by ML</string>
+                 <string>Analyse images</string>
                 </attribute>
                 <layout class="QVBoxLayout" name="verticalLayout_7">
                  <property name="spacing">
@@ -624,7 +624,7 @@ QToolBox::tab{
              <item>
               <widget class="QStackedWidget" name="stackedWidget">
                <property name="currentIndex">
-                <number>1</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="page_3">
                 <widget class="QFrame" name="frame_4">
@@ -790,6 +790,9 @@ QToolBox::tab{
                   </item>
                   <item>
                    <widget class="QFrame" name="frame_7">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
                     <property name="frameShape">
                      <enum>QFrame::StyledPanel</enum>
                     </property>
@@ -870,8 +873,8 @@ QToolBox::tab{
                   <rect>
                    <x>-1</x>
                    <y>-1</y>
-                   <width>711</width>
-                   <height>421</height>
+                   <width>750</width>
+                   <height>430</height>
                   </rect>
                  </property>
                  <property name="frameShape">
@@ -990,10 +993,10 @@ QToolBox::tab{
                 <widget class="QFrame" name="frame_9">
                  <property name="geometry">
                   <rect>
-                   <x>10</x>
-                   <y>10</y>
-                   <width>631</width>
-                   <height>391</height>
+                   <x>-10</x>
+                   <y>0</y>
+                   <width>750</width>
+                   <height>430</height>
                   </rect>
                  </property>
                  <property name="frameShape">
