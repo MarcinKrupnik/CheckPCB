@@ -23,9 +23,9 @@ def predict_pcb(self,choice):
     image = Image.open(image_path)
     image=image.resize((820,616))
     image=image.save(image_path.rstrip('.jpg')+'_resized'+'.jpg')
-    detected = model.predict(image_path.rstrip('.jpg')+'resized'+'.jpg', confidence=40, overlap=15).json()
+    detected = model.predict(image_path.rstrip('.jpg')+'_resized'+'.jpg', confidence=40, overlap=15).json()
     # visualize your prediction
-    model.predict(image_path.rstrip('.jpg')+'resized'+'.jpg', confidence=40, overlap=15).save(image_path.rstrip('.jpg')+"_prediction.jpg")
+    model.predict(image_path.rstrip('.jpg')+'_resized'+'.jpg', confidence=40, overlap=15).save(image_path.rstrip('.jpg')+"_prediction.jpg")
     # infer on an image hosted elsewhere
     # print(model.predict("URL_OF_YOUR_IMAGE", hosted=True, confidence=40, overlap=30).json())
     width = self.ui.frame_4.frameGeometry().width()
