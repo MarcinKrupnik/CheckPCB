@@ -213,7 +213,7 @@ QToolBox::tab{
 }</string>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="page">
                 <property name="geometry">
@@ -624,7 +624,7 @@ QToolBox::tab{
              <item>
               <widget class="QStackedWidget" name="stackedWidget">
                <property name="currentIndex">
-                <number>3</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="page_3">
                 <widget class="QFrame" name="frame_4">
@@ -720,72 +720,74 @@ QToolBox::tab{
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <widget class="QLabel" name="label_3">
-                     <property name="geometry">
-                      <rect>
-                       <x>90</x>
-                       <y>110</y>
-                       <width>164</width>
-                       <height>23</height>
-                      </rect>
-                     </property>
-                     <property name="font">
-                      <font>
-                       <pointsize>14</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>Make base image</string>
-                     </property>
-                     <property name="scaledContents">
-                      <bool>false</bool>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="label_5">
-                     <property name="geometry">
-                      <rect>
-                       <x>110</x>
-                       <y>150</y>
-                       <width>103</width>
-                       <height>16</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>Input name of image:</string>
-                     </property>
-                    </widget>
-                    <widget class="QTextEdit" name="make_image_name">
-                     <property name="geometry">
-                      <rect>
-                       <x>40</x>
-                       <y>190</y>
-                       <width>256</width>
-                       <height>21</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">background-color:rgb(17,16,26);</string>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="make_base_image">
-                     <property name="geometry">
-                      <rect>
-                       <x>121</x>
-                       <y>245</y>
-                       <width>71</width>
-                       <height>21</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">background-color:rgb(17,16,26);
+                    <layout class="QVBoxLayout" name="verticalLayout_19">
+                     <item>
+                      <widget class="QLabel" name="label_3">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>14</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Make base image</string>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>false</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_5">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string>Input name of image:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QTextEdit" name="make_image_name">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color:rgb(17,16,26);</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="make_base_image">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color:rgb(17,16,26);
 </string>
-                     </property>
-                     <property name="text">
-                      <string>MAKE IMAGE</string>
-                     </property>
-                    </widget>
+                       </property>
+                       <property name="text">
+                        <string>MAKE IMAGE</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
                    </widget>
                   </item>
                   <item>
@@ -799,69 +801,71 @@ QToolBox::tab{
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <widget class="QLabel" name="label_4">
-                     <property name="geometry">
-                      <rect>
-                       <x>40</x>
-                       <y>110</y>
-                       <width>224</width>
-                       <height>23</height>
-                      </rect>
-                     </property>
-                     <property name="font">
-                      <font>
-                       <pointsize>14</pointsize>
-                       <weight>75</weight>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>Make production image</string>
-                     </property>
-                    </widget>
-                    <widget class="QLabel" name="label_6">
-                     <property name="geometry">
-                      <rect>
-                       <x>80</x>
-                       <y>150</y>
-                       <width>129</width>
-                       <height>16</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>Input name of base image:</string>
-                     </property>
-                    </widget>
-                    <widget class="QPushButton" name="make_prod_image">
-                     <property name="geometry">
-                      <rect>
-                       <x>101</x>
-                       <y>245</y>
-                       <width>71</width>
-                       <height>21</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">background-color:rgb(17,16,26);
+                    <layout class="QVBoxLayout" name="verticalLayout_18">
+                     <item>
+                      <widget class="QLabel" name="label_4">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>14</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Make production image</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_6">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string>Input name of base image:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QComboBox" name="make_prod_combobox">
+                       <property name="styleSheet">
+                        <string notr="true">background-color:rgb(17,16,26);</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="make_prod_image">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color:rgb(17,16,26);
 </string>
-                     </property>
-                     <property name="text">
-                      <string>MAKE IMAGE</string>
-                     </property>
-                    </widget>
-                    <widget class="QComboBox" name="make_prod_combobox">
-                     <property name="geometry">
-                      <rect>
-                       <x>30</x>
-                       <y>190</y>
-                       <width>231</width>
-                       <height>21</height>
-                      </rect>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">background-color:rgb(17,16,26);</string>
-                     </property>
-                    </widget>
+                       </property>
+                       <property name="text">
+                        <string>MAKE IMAGE</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
                    </widget>
                   </item>
                  </layout>
@@ -883,110 +887,135 @@ QToolBox::tab{
                  <property name="frameShadow">
                   <enum>QFrame::Raised</enum>
                  </property>
-                 <widget class="QLabel" name="label_7">
-                  <property name="geometry">
-                   <rect>
-                    <x>330</x>
-                    <y>120</y>
-                    <width>161</width>
-                    <height>16</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string>Choose image to find differences</string>
-                  </property>
-                 </widget>
-                 <widget class="QComboBox" name="difference_combobox">
-                  <property name="geometry">
-                   <rect>
-                    <x>320</x>
-                    <y>180</y>
-                    <width>181</width>
-                    <height>22</height>
-                   </rect>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color:rgb(17,16,26);
+                 <layout class="QVBoxLayout" name="verticalLayout_13">
+                  <item>
+                   <widget class="QFrame" name="frame_14">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_17">
+                     <item>
+                      <widget class="QLabel" name="label_12">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="layoutDirection">
+                        <enum>Qt::LeftToRight</enum>
+                       </property>
+                       <property name="text">
+                        <string>Show differences</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_16">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_8">
+                     <item>
+                      <widget class="QFrame" name="frame_18">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_14">
+                        <item>
+                         <widget class="QLabel" name="label_10">
+                          <property name="text">
+                           <string>Choose base image</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QComboBox" name="choose_base_combobox">
+                          <property name="styleSheet">
+                           <string notr="true">background-color:rgb(17,16,26);
 </string>
-                  </property>
-                 </widget>
-                 <widget class="QPushButton" name="show_differences">
-                  <property name="geometry">
-                   <rect>
-                    <x>230</x>
-                    <y>250</y>
-                    <width>111</width>
-                    <height>23</height>
-                   </rect>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color:rgb(17,16,26);
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_17">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_15">
+                        <item>
+                         <widget class="QLabel" name="label_7">
+                          <property name="text">
+                           <string>Choose image to find differences</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QComboBox" name="difference_combobox">
+                          <property name="styleSheet">
+                           <string notr="true">background-color:rgb(17,16,26);
 </string>
-                  </property>
-                  <property name="text">
-                   <string>Show differences</string>
-                  </property>
-                 </widget>
-                 <widget class="QLabel" name="label_10">
-                  <property name="geometry">
-                   <rect>
-                    <x>120</x>
-                    <y>120</y>
-                    <width>111</width>
-                    <height>16</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string>Choose base image</string>
-                  </property>
-                 </widget>
-                 <widget class="QComboBox" name="choose_base_combobox">
-                  <property name="geometry">
-                   <rect>
-                    <x>90</x>
-                    <y>180</y>
-                    <width>161</width>
-                    <height>22</height>
-                   </rect>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color:rgb(17,16,26);
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_15">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_16">
+                     <item>
+                      <widget class="QPushButton" name="show_differences">
+                       <property name="styleSheet">
+                        <string notr="true">background-color:rgb(17,16,26);
 </string>
-                  </property>
-                 </widget>
-                 <widget class="QLabel" name="label_11">
-                  <property name="geometry">
-                   <rect>
-                    <x>250</x>
-                    <y>40</y>
-                    <width>47</width>
-                    <height>13</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </widget>
-                 <widget class="QLabel" name="label_12">
-                  <property name="geometry">
-                   <rect>
-                    <x>210</x>
-                    <y>70</y>
-                    <width>161</width>
-                    <height>16</height>
-                   </rect>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>12</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Show differences</string>
-                  </property>
-                 </widget>
+                       </property>
+                       <property name="text">
+                        <string>Show differences</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </widget>
                <widget class="QWidget" name="page_6">
@@ -1005,114 +1034,152 @@ QToolBox::tab{
                  <property name="frameShadow">
                   <enum>QFrame::Raised</enum>
                  </property>
-                 <widget class="QLabel" name="label_8">
-                  <property name="geometry">
-                   <rect>
-                    <x>80</x>
-                    <y>160</y>
-                    <width>151</width>
-                    <height>16</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string>Choose base image to predict</string>
-                  </property>
-                 </widget>
-                 <widget class="QComboBox" name="base_combobox">
-                  <property name="geometry">
-                   <rect>
-                    <x>70</x>
-                    <y>200</y>
-                    <width>161</width>
-                    <height>22</height>
-                   </rect>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color:rgb(17,16,26);
+                 <layout class="QVBoxLayout" name="verticalLayout_10">
+                  <item>
+                   <widget class="QFrame" name="frame_12">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_11">
+                     <item>
+                      <widget class="QLabel" name="label_13">
+                       <property name="font">
+                        <font>
+                         <pointsize>14</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="layoutDirection">
+                        <enum>Qt::LeftToRight</enum>
+                       </property>
+                       <property name="text">
+                        <string>Make prediction of image</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_13">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_7">
+                     <item>
+                      <widget class="QFrame" name="frame_10">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_12">
+                        <item>
+                         <widget class="QLabel" name="label_8">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string>Choose base image to predict</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QComboBox" name="base_combobox">
+                          <property name="styleSheet">
+                           <string notr="true">background-color:rgb(17,16,26);
 </string>
-                  </property>
-                 </widget>
-                 <widget class="QPushButton" name="predict_base">
-                  <property name="geometry">
-                   <rect>
-                    <x>90</x>
-                    <y>260</y>
-                    <width>111</width>
-                    <height>23</height>
-                   </rect>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color:rgb(17,16,26);
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="predict_base">
+                          <property name="styleSheet">
+                           <string notr="true">background-color:rgb(17,16,26);
 </string>
-                  </property>
-                  <property name="text">
-                   <string>Predict base image</string>
-                  </property>
-                 </widget>
-                 <widget class="QLabel" name="label_9">
-                  <property name="geometry">
-                   <rect>
-                    <x>360</x>
-                    <y>160</y>
-                    <width>181</width>
-                    <height>20</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string>Choose production image to predict</string>
-                  </property>
-                 </widget>
-                 <widget class="QComboBox" name="prod_combobox">
-                  <property name="geometry">
-                   <rect>
-                    <x>350</x>
-                    <y>200</y>
-                    <width>171</width>
-                    <height>22</height>
-                   </rect>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color:rgb(17,16,26);
+                          </property>
+                          <property name="text">
+                           <string>Predict base image</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_11">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout">
+                        <item row="0" column="0">
+                         <widget class="QLabel" name="label_9">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string>Choose production image to predict</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QComboBox" name="prod_combobox">
+                          <property name="styleSheet">
+                           <string notr="true">background-color:rgb(17,16,26);
 </string>
-                  </property>
-                 </widget>
-                 <widget class="QPushButton" name="predict_prod">
-                  <property name="geometry">
-                   <rect>
-                    <x>390</x>
-                    <y>260</y>
-                    <width>121</width>
-                    <height>23</height>
-                   </rect>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color:rgb(17,16,26);
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="0">
+                         <widget class="QPushButton" name="predict_prod">
+                          <property name="styleSheet">
+                           <string notr="true">background-color:rgb(17,16,26);
 </string>
-                  </property>
-                  <property name="text">
-                   <string>Predict prod image</string>
-                  </property>
-                 </widget>
-                 <widget class="QLabel" name="label_13">
-                  <property name="geometry">
-                   <rect>
-                    <x>170</x>
-                    <y>90</y>
-                    <width>261</width>
-                    <height>31</height>
-                   </rect>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>14</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Make prediction of image</string>
-                  </property>
-                 </widget>
+                          </property>
+                          <property name="text">
+                           <string>Predict prod image</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </widget>
               </widget>
