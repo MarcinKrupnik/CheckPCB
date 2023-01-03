@@ -105,6 +105,7 @@ class MainWindow(QMainWindow):
         self.show()
 
     def summary_base(self):
+        """Function to summary"""
         try:
             set_prediction_base_text=""
             with open('images/'+self.ui.summary_base_combobox.currentText()+'/' + \
