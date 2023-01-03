@@ -31,7 +31,6 @@ class MainWindow(QMainWindow):
         self.ui.centralwidget.setGraphicsEffect(self.shadow)
 
         self.setWindowIcon(QtGui.QIcon("icons/check-circle.svg"))
-        # Set window tittle
         self.setWindowTitle("Check PCB")
 
         self.image = QPixmap("your_image.jpg")
