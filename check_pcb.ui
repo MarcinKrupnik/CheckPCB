@@ -232,7 +232,7 @@ QToolBox::tab{
                   <normaloff>icons/chevron-down.svg</normaloff>icons/chevron-down.svg</iconset>
                 </attribute>
                 <attribute name="label">
-                 <string>Prepare images</string>
+                 <string>Analyze</string>
                 </attribute>
                 <layout class="QVBoxLayout" name="verticalLayout_6">
                  <property name="spacing">
@@ -263,7 +263,7 @@ QToolBox::tab{
 </string>
                    </property>
                    <property name="text">
-                    <string>First Button</string>
+                    <string>Make image</string>
                    </property>
                   </widget>
                  </item>
@@ -317,7 +317,7 @@ QToolBox::tab{
                   <normaloff>icons/chevron-down.svg</normaloff>icons/chevron-down.svg</iconset>
                 </attribute>
                 <attribute name="label">
-                 <string>Analyse images</string>
+                 <string>Summary</string>
                 </attribute>
                 <layout class="QVBoxLayout" name="verticalLayout_7">
                  <property name="spacing">
@@ -336,7 +336,7 @@ QToolBox::tab{
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="five_button">
+                  <widget class="QPushButton" name="summary_button">
                    <property name="font">
                     <font>
                      <weight>75</weight>
@@ -348,7 +348,7 @@ QToolBox::tab{
 </string>
                    </property>
                    <property name="text">
-                    <string>Five Button</string>
+                    <string>Summary informations</string>
                    </property>
                   </widget>
                  </item>
@@ -365,7 +365,7 @@ QToolBox::tab{
 </string>
                    </property>
                    <property name="text">
-                    <string>Six Button</string>
+                    <string>Author informations</string>
                    </property>
                   </widget>
                  </item>
@@ -1018,6 +1018,195 @@ QToolBox::tab{
                  </layout>
                 </widget>
                </widget>
+               <widget class="QWidget" name="page_7">
+                <widget class="QFrame" name="frame_19">
+                 <property name="geometry">
+                  <rect>
+                   <x>-10</x>
+                   <y>-10</y>
+                   <width>750</width>
+                   <height>430</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>750</width>
+                   <height>430</height>
+                  </size>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_20">
+                  <item>
+                   <widget class="QFrame" name="frame_21">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_10">
+                     <item>
+                      <widget class="QFrame" name="frame_24">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_23">
+                        <item>
+                         <widget class="QLabel" name="label_11">
+                          <property name="text">
+                           <string>Choose base image</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QComboBox" name="summary_base_combobox">
+                          <property name="styleSheet">
+                           <string notr="true">background-color:rgb(17,16,26);</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_25">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_24">
+                        <item>
+                         <widget class="QLabel" name="label_20">
+                          <property name="text">
+                           <string>Choose production image</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QComboBox" name="summary_prod_combobox">
+                          <property name="styleSheet">
+                           <string notr="true">background-color:rgb(17,16,26);</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_20">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_9">
+                     <item>
+                      <widget class="QFrame" name="frame_22">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_21">
+                        <item>
+                         <widget class="QLabel" name="label_14">
+                          <property name="text">
+                           <string>Percents of incorrectness</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_15">
+                          <property name="text">
+                           <string>Predicted on base image</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_16">
+                          <property name="text">
+                           <string>Predicted on production image</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_23">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_22">
+                        <item>
+                         <widget class="QLabel" name="incorrectness_label">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="predicted_base_label">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="predicted_production_label">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
                <widget class="QWidget" name="page_6">
                 <widget class="QFrame" name="frame_9">
                  <property name="geometry">
@@ -1109,6 +1298,12 @@ QToolBox::tab{
                         </item>
                         <item>
                          <widget class="QComboBox" name="base_combobox">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
                           <property name="styleSheet">
                            <string notr="true">background-color:rgb(17,16,26);
 </string>
@@ -1137,8 +1332,8 @@ QToolBox::tab{
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <layout class="QGridLayout" name="gridLayout">
-                        <item row="0" column="0">
+                       <layout class="QVBoxLayout" name="verticalLayout_25">
+                        <item>
                          <widget class="QLabel" name="label_9">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -1154,7 +1349,7 @@ QToolBox::tab{
                           </property>
                          </widget>
                         </item>
-                        <item row="1" column="0">
+                        <item>
                          <widget class="QComboBox" name="prod_combobox">
                           <property name="styleSheet">
                            <string notr="true">background-color:rgb(17,16,26);
@@ -1162,7 +1357,7 @@ QToolBox::tab{
                           </property>
                          </widget>
                         </item>
-                        <item row="2" column="0">
+                        <item>
                          <widget class="QPushButton" name="predict_prod">
                           <property name="styleSheet">
                            <string notr="true">background-color:rgb(17,16,26);
